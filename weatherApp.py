@@ -40,7 +40,6 @@ def getDataTimeCurrent(data):
 def requestWeatherData(location):
     baseURL = 'https://api.darksky.net/forecast'
     secretKey = 'YOUR_KEY_HERE'
-    #'53.442,14.497'
     parameters = {'lang':'pl', 'units':'si', 'exclude':'[flags,minutely]'}
 
     return requests.get('{}/{}/{}'.format(baseURL, secretKey, location), params = parameters)
